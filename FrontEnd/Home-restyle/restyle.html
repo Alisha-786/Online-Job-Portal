@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="restyle.css" />
+    <link rel="icon" type="image/png" href="Favicon- Next Hire.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap-grid.min.css"
+      integrity="sha512-i1b/nzkVo97VN5WbEtaPebBG8REvjWeqNclJ6AItj7msdVcaveKrlIIByDpvjk5nwHjXkIqGZscVxOrTb9tsMA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- Header Section-->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm p-2">
+      <div class="container-fluid">
+        <!-- Brand and Logo -->
+        <div class="d-flex align-items-center" id="next-logo">
+          <a class="navbar-brand fw-bold fs-3" href="#">Next Hire</a>
+          <i class="bi bi-graph-up fs-3 text-primary ms-2"></i>
+        </div>
+
+        <!-- Mobile Toggle Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto" id="icons">
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="bi bi-house-door-fill fs-5"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="bi bi-suitcase-lg-fill fs-5"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="bi bi-chat-dots fs-5"></i
+              ></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="bi bi-bell-fill fs-5"></i
+              ></a>
+            </li>
+          </ul>
+
+          <!-- Profile Dropdown -->
+          <div class="dropdown">
+            <a
+              class="nav-link dropdown-toggle d-flex align-items-center"
+              href="#"
+              id="profileDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+            >
+              <img
+                src="https://img.freepik.com/premium-vector/default-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-vector-illustration_561158-3383.jpg"
+                class="rounded-circle me-2"
+                alt="Profile"
+                width="30"
+                height="30"
+              />
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="bi bi-person-circle me-2"></i> My Profile</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="bi bi-heart me-2"></i> Watchlist</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="bi bi-plus-circle me-2"></i> Post a Job</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="bi bi-qr-code me-2"></i> Manage Account</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="bi bi-shield-check me-2"></i> Privacy and
+                  Cookies</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="bi bi-patch-check me-2"></i> Buy a Plan</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="bi bi-info-circle me-2"></i> Help</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="bi bi-gear me-2"></i> Settings</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item text-danger" href="#" id="danger"
+                  ><i class="bi bi-box-arrow-right me-2"></i> Logout</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!--Search box-->
+    <div class="middlebody p-2">
+      <div class="jobsearch mt-5">
+        <form class="search-bar">
+          <div class="input-group w-50 mx-auto">
+            <input
+              type="search"
+              id="job-control"
+              class="form-control form-control-lg"
+              name="from"
+              placeholder="Job title"
+            />
+            <select
+              class="form-select"
+              id="locationSelect"
+              aria-labelledby="locationLabel"
+            >
+              <option selected disabled>Location</option>
+              <option value="1">India</option>
+              <option value="2">London</option>
+              <option value="3">New York</option>
+              <option value="4">Canada</option>
+              <option value="5">America</option>
+              <option value="6">China</option>
+              <option value="7">Australia</option>
+            </select>
+            <select
+              class="form-select"
+              id="experienceSelect"
+              aria-labelledby="experienceLabel"
+            >
+              <option selected disabled>Experience</option>
+              <option value="1">Freshers</option>
+              <option value="2">1-9 Year</option>
+              <option value="3">9-15 Years</option>
+              <option value="4">15+ Years</option>
+              <option value="5">25+ Years</option>
+              <option value="6">35+ Years</option>
+            </select>
+            <select
+              class="form-select"
+              id="companySelect"
+              aria-labelledby="companyLabel"
+            >
+              <option selected disabled>Company</option>
+              <option value="1">Google</option>
+              <option value="2">Apple</option>
+              <option value="3">Microsoft</option>
+              <option value="4">Tesla</option>
+              <option value="5">Amazon</option>
+              <option value="6">NVIDIA</option>
+              <option value="7">IBM</option>
+              <option value="8">Adobe</option>
+            </select>
+            <button class="btn btn-outine-light" id="search-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-search"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                />
+              </svg>
+            </button>
+          </div>
+          <div id="alert-message"></div>
+        </form>
+
+        <div id="alert-message"></div>
+      </div>
+
+      <!-- First Section -->
+      <div class="container carousel-container">
+        <h3 class="text-center fw-bold text-light">Job Opportunities</h3>
+
+        <div id="jobCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="d-flex justify-content-center">
+                <div class="job-card w-75">
+                  <div class="company-name">TechNova</div>
+                  <div class="job-title">Software Engineer (Backend)</div>
+                  <div class="job-details">
+                    📍 Remote | 💰 $90K - $120K + Benefits
+                  </div>
+                  <p>
+                    Join our AI team to build high-performance APIs and scalable
+                    systems!
+                  </p>
+                  <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="d-flex justify-content-center">
+                <div class="job-card w-75">
+                  <div class="company-name">CreativeLabs</div>
+                  <div class="job-title">UI/UX Designer</div>
+                  <div class="job-details">
+                    📍 New York, NY (Hybrid) | 💰 $70K - $90K
+                  </div>
+                  <p>
+                    Craft intuitive and user-friendly experiences for mobile and
+                    web applications.
+                  </p>
+                  <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+              <div class="d-flex justify-content-center">
+                <div class="job-card w-75">
+                  <div class="company-name">FinTech Hub</div>
+                  <div class="job-title">Product Manager</div>
+                  <div class="job-details">
+                    📍 Remote | 💰 Competitive + Stock Options
+                  </div>
+                  <p>
+                    Lead our product roadmap and drive innovation in financial
+                    solutions.
+                  </p>
+                  <a href="#" class="apply-btn">Apply Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Buttons -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#jobCarousel"
+            data-bs-slide="prev"
+            title="Previous job"
+            aria-label="Previous job opportunity"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#jobCarousel"
+            data-bs-slide="next"
+            title="Next job"
+            aria-label="Next job opportunity"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Section -->
+
+    <div class="container text-center mt-5">
+      <h2>
+        <span class="text-light fw-bold">Job</span>
+        <span class="text-light fw-bold">Category</span>
+      </h2>
+      <div class="jobopening">
+        <div class="row mt-4">
+          <div class="col-md-4">
+            <div class="job-box">
+              <h5>UI/UX Designer</h5>
+              <p>25 Vacancy</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="job-box">
+              <h5>Website Development</h5>
+              <p>27 Vacancy</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="job-box">
+              <h5>Digital Marketing</h5>
+              <p>7 Vacancy</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-md-4">
+            <div class="job-box">
+              <h5>Health & Care</h5>
+              <p>15 Vacancy</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="job-box">
+              <h5>Cyber Security</h5>
+              <p>20 Vacancy</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="job-box">
+              <h5>Content Writing</h5>
+              <p>16 Vacancy</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-md-4">
+            <div class="job-box">
+              <h5>Data Analyst</h5>
+              <p>32 Vacancy</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="job-box">
+              <h5>Sales</h5>
+              <p>45 Vacancy</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="job-box">
+              <h5>Graphic Designing</h5>
+              <p>23 Vacancy</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Third Section-->
+
+    <section id="testimonials" class="py-5">
+      <div class="container py-5">
+        <div class="text-center mb-5">
+          <h2 class="fw-bold text-light">Follow</h2>
+        </div>
+
+        <div id="ceoCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+              <div class="row text-center">
+                <div class="col-md-4">
+                  <div class="card p-4 shadow-sm">
+                    <div class="follow">
+                      <span class="badge bg-primary mb-2"
+                        >Follow <i class="bi bi-plus-circle"></i
+                      ></span>
+                    </div>
+                    <img
+                      class="testimonial-img mx-auto d-block"
+                      src="https://i.pinimg.com/736x/29/3a/95/293a95ac45fab6249c593bdff49ee894.jpg"
+                      alt="pic1"
+                    />
+                    <h5>Alex Volkov</h5>
+                    <small class="text-muted">CEO, Archer Group</small>
+                    <p class="text-muted">
+                      "Innovation is the bridge between dreams and reality."
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="card p-4 shadow-sm">
+                    <div class="follow">
+                      <span class="badge bg-primary mb-2"
+                        >Follow <i class="bi bi-plus-circle"></i
+                      ></span>
+                    </div>
+                    <img
+                      class="testimonial-img mx-auto d-block"
+                      src="https://i.pinimg.com/736x/16/a9/b9/16a9b9f6146fd0358ff0eb1397890c70.jpg"
+                      alt="pic2"
+                    />
+                    <h5>Jules Ambrose</h5>
+                    <small class="text-muted">Lawyer, Silver&Klein</small>
+                    <p class="text-muted">
+                      "A person who is quietly confident makes the best leader."
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="card p-4 shadow-sm">
+                    <div class="follow">
+                      <span class="badge bg-primary mb-2"
+                        >Follow <i class="bi bi-plus-circle"></i
+                      ></span>
+                    </div>
+                    <img
+                      class="testimonial-img mx-auto d-block"
+                      src="https://i.pinimg.com/236x/a6/40/33/a640337a30c0c2589169a8749830610a.jpg"
+                      alt="pic3"
+                    />
+                    <h5>Rhys Larsen</h5>
+                    <small class="text-muted">Bodyguard, Eldorra</small>
+                    <p class="text-muted">
+                      "You should learn from your competitor, but never copy.
+                      Copy and you die."
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+              <div class="row text-center">
+                <div class="col-md-4">
+                  <div class="card p-4 shadow-sm">
+                    <div class="follow">
+                      <span class="badge bg-primary mb-2"
+                        >Follow <i class="bi bi-plus-circle"></i
+                      ></span>
+                    </div>
+                    <img
+                      class="testimonial-img mx-auto d-block"
+                      src="https://i.pinimg.com/736x/1b/91/c8/1b91c828b016749e88a0ec19992e8900.jpg"
+                      alt="pic4"
+                    />
+                    <h5>Christian Harper</h5>
+                    <small class="text-muted">CEO, Harper Security</small>
+                    <p class="text-muted">
+                      "Success is built on persistence, not luck."
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="card p-4 shadow-sm">
+                    <div class="follow">
+                      <span class="badge bg-primary mb-2"
+                        >Follow <i class="bi bi-plus-circle"></i
+                      ></span>
+                    </div>
+                    <img
+                      class="testimonial-img mx-auto d-block"
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3Xku0Yh4G8Z2k4GSCGMnnp_3qO_URsT-rHQ&s"
+                      alt="pic5"
+                    />
+                    <h5>Dante Russo</h5>
+                    <small class="text-muted">CEO, Russo Group</small>
+                    <p class="text-muted">
+                      "Every setback is a setup for a comeback."
+                    </p>
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                  <div class="card p-4 shadow-sm">
+                    <div class="follow">
+                      <span class="badge bg-primary mb-2"
+                        >Follow <i class="bi bi-plus-circle"></i
+                      ></span>
+                    </div>
+                    <img
+                      class="testimonial-img mx-auto d-block"
+                      src="https://i.pinimg.com/736x/9e/5c/7b/9e5c7b209dc709dcc4f5608930e93a11.jpg"
+                      alt="pic6"
+                    />
+                    <h5>Zade Meadows</h5>
+                    <small class="text-muted">CEO ,Z Organisation</small>
+                    <p class="text-muted">
+                      "A leader is someone who brings people together."
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carousel Controls -->
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#ceoCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#ceoCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!--Fourth section-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="restyle.js"></script>
+  </body>
+</html>
