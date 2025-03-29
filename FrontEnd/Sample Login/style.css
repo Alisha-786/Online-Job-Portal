@@ -1,0 +1,92 @@
+body {
+  background-color: #f8f9fa;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.container-fluid {
+  height: 100%;
+}
+
+.login-section {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box {
+  width: 80%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.brand-name {
+  background: rgb(43, 18, 76);
+  background: linear-gradient(
+    131deg,
+    rgba(43, 18, 76, 1) 0%,
+    rgba(170, 73, 193, 1) 83%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+.accountLogin,
+#forget-password,
+#createAcc {
+  background: rgb(43, 18, 76);
+  background: linear-gradient(
+    131deg,
+    rgba(43, 18, 76, 1) 0%,
+    rgba(170, 73, 193, 1) 83%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#login-btn {
+  background: rgb(43, 18, 76);
+  background: linear-gradient(
+    131deg,
+    rgba(43, 18, 76, 1) 0%,
+    rgba(170, 73, 193, 1) 83%
+  );
+}
+.btn-light {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid #ddd;
+}
+
+#right-side {
+  background: rgb(43, 18, 76);
+  background: linear-gradient(
+    131deg,
+    rgba(43, 18, 76, 1) 0%,
+    rgba(170, 73, 193, 1) 83%
+  );
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.info-box {
+  text-align: center;
+  max-width: 400px;
+}
+
+.d-grid img {
+  height: 20px;
+}
+.info {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+}
