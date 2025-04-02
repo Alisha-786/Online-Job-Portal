@@ -35,7 +35,7 @@ body {
   font-weight: bold;
 }
 .accountLogin,
-#forget-password,
+#forgot-password,
 #createAcc {
   background: rgb(43, 18, 76);
   background: linear-gradient(
@@ -54,6 +54,7 @@ body {
     rgba(43, 18, 76, 1) 0%,
     rgba(170, 73, 193, 1) 83%
   );
+  color: #f8f9fa;
 }
 .btn-light {
   display: flex;
@@ -90,3 +91,4 @@ body {
   width: 100vw;
   object-fit: cover;
 }
+
