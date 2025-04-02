@@ -5,87 +5,97 @@ document.addEventListener("DOMContentLoaded", function () {
   const rememberMeCheckbox = document.getElementById("remember");
   const forgotPasswordLink = document.getElementById("forgot-password");
 
-  loginForm.addEventListener("submit", function (submit) {
-    submit.preventDefault(); // Prevent default form submission
-
-    const email = emailInput.value.trim();
-    const password = passwordInput.value.trim();
-
-    if (email === "") {
-      showAlert("❌ Email field cannot be empty.", "danger");
-      return;
-    }
-
-    if (password === "") {
-      showAlert("❌ Password field cannot be empty.", "danger");
-      return;
-    }
-
-    if (!validateEmail(email)) {
-      showAlert("❌ Please enter a valid email address.", "danger");
-      return;
-    }
-
-    if (password.length < 6) {
-      showAlert("❌ Password must be at least 6 characters long.", "danger");
-      return;
-    }
-
-    // Store email & password in local storage if "Remember Me" is checked
-    if (rememberMeCheckbox.checked) {
-      localStorage.setItem("rememberedEmail", email);
-      localStorage.setItem("rememberedPassword", password);
-    } else {
-      localStorage.removeItem("rememberedEmail");
-      localStorage.removeItem("rememberedPassword");
-    }
-
-    showAlert("✅ Login successful! Redirecting...", "success");
-
-    // Simulating a delay before redirecting
-    setTimeout(() => {
-      window.location.href = "dashboard.html"; // Change this to your actual target page
-    }, 2000);
-  });
-
-  // Forgot password functionality - Clears password field
-  forgotPasswordLink.addEventListener("click", function (click) {
-    click.preventDefault();
-    passwordInput.value = "";
-    localStorage.removeItem("rememberedPassword"); // Remove password from storage
-    showAlert(
-      "🔑 Password field has been cleared. Please enter a new password.",
-      "info"
-    );
-  });
-
-  // Function to validate email format
-  function validateEmail(email) {
-    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return regex.test(email);
-  }
-
-  // Function to show alert messages
-  function showAlert(message, type) {
+  // Function to show alerts dynamically
+  function showAlert(message, type, callback = null) {
     let alertBox = document.getElementById("alert-box");
 
     if (!alertBox) {
       alertBox = document.createElement("div");
       alertBox.id = "alert-box";
+      alertBox.setAttribute("role", "alert");
       alertBox.style.cssText =
-        "position: fixed; top: 10px; left: 50%; transform: translateX(-50%); padding: 10px 20px; border-radius: 5px; color: white; z-index: 1000; text-align: center;";
+        "position: fixed; top: 20px; left: 50%; transform: translateX(-50%); padding: 10px 20px; border-radius: 20px; color: white; z-index: 1000; text-align: center;";
       document.body.appendChild(alertBox);
     }
 
-    alertBox.textContent = message;
+    alertBox.innerText = message;
     alertBox.style.backgroundColor =
       type === "success" ? "green" : type === "danger" ? "red" : "blue";
 
     alertBox.style.display = "block";
 
+    // Hide alert after 1 second and execute callback if provided
     setTimeout(() => {
       alertBox.style.display = "none";
-    }, 3000);
+      alertBox.remove();
+      if (callback) callback(); // Execute callback function (for redirection)
+    }, 1000);
+  }
+
+  // Function to validate email format
+  function validateEmail(email) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+  }
+
+  // Load remembered email on page load
+  function loadRememberedCredentials() {
+    const storedEmail = localStorage.getItem("rememberedEmail");
+    if (storedEmail) emailInput.value = storedEmail;
+  }
+
+  loadRememberedCredentials(); // Load stored email
+
+  if (loginForm) {
+    loginForm.addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent default form submission
+
+      const email = emailInput.value.trim();
+      const password = passwordInput.value.trim();
+
+      if (!email) {
+        showAlert("❌ Email field cannot be empty.", "danger");
+        return;
+      }
+
+      if (!password) {
+        showAlert("❌ Password field cannot be empty.", "danger");
+        return;
+      }
+
+      if (!validateEmail(email)) {
+        showAlert("❌ Please enter a valid email address.", "danger");
+        return;
+      }
+
+      if (password.length < 6) {
+        showAlert("❌ Password must be at least 6 characters long.", "danger");
+        return;
+      }
+
+      // Store email in local storage if "Remember Me" is checked
+      if (rememberMeCheckbox.checked) {
+        localStorage.setItem("rememberedEmail", email);
+      } else {
+        localStorage.removeItem("rememberedEmail");
+      }
+
+      showAlert("✅ Login successful! Redirecting...", "success", function () {
+        window.location.href = "../Home-restyle/restyle.html"; // Ensure this path is correct
+      });
+    });
+  }
+
+  // Forgot password functionality
+  if (forgotPasswordLink) {
+    forgotPasswordLink.addEventListener("click", function (event) {
+      event.preventDefault();
+      passwordInput.value = "";
+      showAlert(
+        "🔑 Password field has been cleared. Please enter a new password.",
+        "info"
+      );
+    });
   }
 
   // Social login button click effect
@@ -98,3 +108,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
