@@ -1,0 +1,108 @@
+.job-card {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#next-logo,
+#icons {
+  background: rgb(43, 18, 76);
+  background: linear-gradient(
+    131deg,
+    rgba(43, 18, 76, 1) 0%,
+    rgba(170, 73, 193, 1) 83%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.badge-custom {
+  font-size: 12px;
+  padding: 5px 10px;
+}
+.pagination .page-item.active .page-link {
+  background: rgb(43, 18, 76);
+  background: linear-gradient(
+    131deg,
+    rgba(43, 18, 76, 1) 0%,
+    rgba(170, 73, 193, 1) 83%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#see-btn {
+  background: rgb(43, 18, 76);
+  background: linear-gradient(
+    131deg,
+    rgba(43, 18, 76, 1) 0%,
+    rgba(170, 73, 193, 1) 83%
+  );
+  color: white;
+  transition: all 0.3s ease;
+  border-radius: 50px;
+  box-shadow: inset 4px 4px 10px rgba(43, 18, 76, 0.415);
+}
+#see-btn:hover {
+  background: rgb(43, 18, 76);
+  background: linear-gradient(
+    131deg,
+    rgba(43, 18, 76, 1) 0%,
+    rgba(170, 73, 193, 1) 83%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-color: rgb(43, 18, 76);
+  border-radius: 50px;
+}
+#boxes {
+  box-shadow: 10px 10px 30px rgba(43, 18, 76, 0.266);
+  transition: all 0.5s ease;
+}
+#boxes:hover {
+  box-shadow: 10px 10px 30px rgba(43, 18, 76, 0.999);
+  transform: translateY(-3px);
+}
+#showMoreBtn {
+  background: rgb(43, 18, 76);
+  background: linear-gradient(
+    131deg,
+    rgba(43, 18, 76, 1) 0%,
+    rgba(170, 73, 193, 1) 83%
+  );
+  color: white;
+  border-radius: 50px;
+}
+#showMoreBtn:hover {
+  background: rgba(43, 18, 76, 0.452);
+  background: linear-gradient(
+    131deg,
+    rgba(43, 18, 76, 1) 0%,
+    rgba(170, 73, 193, 1) 83%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border-color: rgb(43, 18, 76);
+  transition: all 0.3s ease;
+  border-radius: 50px;
+  box-shadow: inset 4px 5px 20px rgba(43, 18, 76, 0.837);
+}
+
+#search-icon {
+  background: rgb(43, 18, 76);
+  background: linear-gradient(
+    131deg,
+    rgba(43, 18, 76, 1) 0%,
+    rgba(170, 73, 193, 1) 83%
+  );
+  color: white;
+}
+.search-bar .form-control,
+.search-bar .form-select {
+  border-radius: 50px 0 0 50px;
+}
+
+.search-bar .btn {
+  border-radius: 0 25px 25px 0;
+}
