@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     duration: 1.2,
     ease: "power2.out",
   });
-  
+
   gsap.from(".job-box", {
     opacity: 0,
     y: 30,
@@ -95,8 +95,8 @@ document.querySelectorAll(".accordion-header").forEach((button) => {
 document.addEventListener("DOMContentLoaded", function () {
   document
     .getElementById("jobSearchForm")
-    .getElementById("submit", function (event) {
-      event.preventDefault(); // Prevent default form submission
+    .getElementById("submit", function (click) {
+      click.preventDefault(); // Prevent default form submission
 
       // Get input values
       let jobTitle = document.getElementById("jobTitle").value.trim();
@@ -122,8 +122,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("form");
   const submitButton = form.querySelector("button");
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent default form submission
+  form.addEventListener("submit", function (click) {
+    click.preventDefault(); // Prevent default form submission
 
     // Get form values
 
