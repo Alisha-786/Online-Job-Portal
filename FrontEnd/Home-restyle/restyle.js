@@ -64,21 +64,22 @@ if (logoutButton) {
 
 document.addEventListener("DOMContentLoaded", function () {
   const searchForm = document.querySelector(".search-bar");
-  const alertMessage = document.createElement("div"); // Create alert message element
+  const searchBtn = document.getElementById("search-button");
+
+  // Create alert message element
+  const alertMessage = document.createElement("div");
   alertMessage.id = "alert-message";
   alertMessage.style.cssText =
     "color: white; background-color: red; padding: 10px; margin-top: 10px; text-align: center; display: none; border-radius: 5px;";
   searchForm.parentElement.appendChild(alertMessage); // Append alert below the form
 
-  searchForm.addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent form submission
-
-    // Get input values
+  // Function to validate form
+  function validateForm() {
     const jobTitle = document.querySelector("#job-control").value.trim();
     const location = document.querySelector("#locationSelect").value;
     const experience = document.querySelector("#experienceSelect").value;
     const company = document.querySelector("#companySelect").value;
-    // Validate form
+
     if (
       !jobTitle ||
       location === "Location" ||
@@ -93,15 +94,39 @@ document.addEventListener("DOMContentLoaded", function () {
         alertMessage.style.display = "none";
       }, 3000);
 
-      return;
+      return false; // Stop execution
     }
 
-    // If validation passes
-    alertMessage.style.display = "none";
-    console.log("Job Title:", jobTitle);
-    console.log("Location:", location);
-    console.log("Experience:", experience);
-    console.log("Company:", company);
+    return true; // Form is valid
+  }
+
+  // Add event listener to the search form
+  searchForm.addEventListener("submit", function (click) {
+    click.preventDefault(); // Prevent form submission
+
+    if (validateForm()) {
+      console.log("Form is valid. Redirecting...");
+
+      // Store search values in localStorage
+      localStorage.setItem(
+        "jobTitle",
+        document.querySelector("#job-control").value.trim()
+      );
+      localStorage.setItem(
+        "location",
+        document.querySelector("#locationSelect").value
+      );
+      localStorage.setItem(
+        "experience",
+        document.querySelector("#experienceSelect").value
+      );
+      localStorage.setItem(
+        "company",
+        document.querySelector("#companySelect").value
+      );
+      // Redirect to another page (change 'browse.html' to your actual page)
+      window.location.href = "../Browse-Jobs/browse.html";
+    }
   });
 });
 
@@ -121,5 +146,48 @@ document.addEventListener("DOMContentLoaded", function () {
         this.innerHTML = "Follow <i class='bi bi-plus-circle'></i>";
       }
     });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("form");
+  const submitButton = form.querySelector("button");
+
+  form.addEventListener("submit", function (click) {
+    click.preventDefault(); // Prevent default form submission
+
+    // Get form values
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let message = document.getElementById("message").value.trim();
+    let submitButton = document.getElementById("submitButton");
+
+    // Basic validation
+    if (name === "" || email === "" || message === "") {
+      alert("Please fill out all fields before submitting.");
+      return;
+    }
+
+    let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+    if (!email.match(emailPattern)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    submitButton.textContent = "Sending...";
+    submitButton.disabled = true;
+    submitButton.style.backgroundColor = "#ffa500";
+
+    // Simulate form submission process
+    setTimeout(() => {
+      alert("Message sent successfully!");
+      submitButton.style.backgroundColor = "green";
+      submitButton.textContent = "Submitted";
+      submitButton.disabled = true;
+      setTimeout(() => {
+        location.reload();
+      }, 1000);
+    }, 1000);
   });
 });

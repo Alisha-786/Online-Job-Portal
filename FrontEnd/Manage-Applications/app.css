@@ -1,0 +1,117 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f9fa;
+}
+
+#next-logo,
+#icons {
+  background: rgb(43, 18, 76);
+  background: linear-gradient(
+    131deg,
+    rgba(43, 18, 76, 1) 0%,
+    rgba(170, 73, 193, 1) 83%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.sidebar-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.nav-link {
+  color: rgb(17, 10, 25);
+  padding: 10px;
+}
+
+.nav-link:hover {
+  color: rgb(84, 37, 146);
+}
+
+.card {
+  border: none;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+  display: flex;
+  align-items: center;
+}
+
+.search-filter input,
+.search-filter select {
+  display: inline-block;
+}
+.profile {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.applicants {
+  font-weight: bold;
+  font-size: 35px;
+}
+
+/* Sidebar styles */
+.sidebar {
+  height: 100vh;
+  border-right: 1px solid #ddd;
+  transition: height 0.5s ease-in-out;
+  background: #fff;
+}
+
+.hidden {
+  width: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* Initially hide the toggle button */
+#toggle-sidebar {
+  display: none;
+  margin: 10px;
+}
+#viewprofile {
+  background: rgb(43, 18, 76);
+  background: linear-gradient(
+    131deg,
+    rgba(43, 18, 76, 1) 0%,
+    rgba(170, 73, 193, 1) 83%
+  );
+}
+#viewprofile:hover {
+  background: rgb(43, 18, 76);
+  background: linear-gradient(
+    131deg,
+    rgba(43, 18, 76, 0.845) 0%,
+    rgba(171, 73, 193, 0.844) 83%
+  );
+  color: rgba(255, 255, 255, 0.836);
+}
+#toggle-sidebar,
+#close-sidebar {
+  background: rgb(43, 18, 76);
+  background: linear-gradient(
+    131deg,
+    rgb(43, 18, 76) 0%,
+    rgb(171, 73, 193) 83%
+  );
+  color: #f8f9fa;
+}
+
+.card:hover {
+  background: rgba(43, 18, 76, 0.452);
+  background: linear-gradient(
+    131deg,
+    rgba(43, 18, 76, 1) 0%,
+    rgba(170, 73, 193, 1) 83%
+  );
+  -webkit-background-clip: text;
+  border-color: rgb(43, 18, 76);
+  transition: all 0.3s ease;
+  box-shadow: 4px 5px 20px rgba(43, 18, 76, 0.837);
+}

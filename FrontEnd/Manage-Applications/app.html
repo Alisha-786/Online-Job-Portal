@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Applicants</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap-grid.min.css"
+      integrity="sha512-i1b/nzkVo97VN5WbEtaPebBG8REvjWeqNclJ6AItj7msdVcaveKrlIIByDpvjk5nwHjXkIqGZscVxOrTb9tsMA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light shadow-sm p-2"
+      id="headering"
+    >
+      <div class="container-fluid">
+        <!-- Brand and Logo -->
+        <div class="d-flex align-items-center" id="next-logo">
+          <a class="navbar-brand fw-bold fs-3" href="#">Next Hire</a>
+          <i class="bi bi-graph-up fs-3 text-primary ms-2"></i>
+        </div>
+
+        <!-- Mobile Toggle Button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar Links -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto" id="icons">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../Browse-Jobs/browse.html">Jobs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Message</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Notifications</a>
+            </li>
+          </ul>
+
+          <!-- Profile Dropdown -->
+          <div class="dropdown">
+            <a
+              class="nav-link dropdown-toggle d-flex align-items-center"
+              href="#"
+              id="profileDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+            >
+              <img
+                src="https://img.freepik.com/premium-vector/default-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-vector-illustration_561158-3383.jpg"
+                class="rounded-circle me-2"
+                alt="Profile"
+                width="30"
+                height="30"
+              />
+            </a>
+
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="bi bi-person-circle me-2"></i> My Profile</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="bi bi-heart me-2"></i> Watchlist</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="bi bi-plus-circle me-2"></i> Post a Job</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="bi bi-qr-code me-2"></i> Manage Account</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="bi bi-shield-check me-2"></i> Privacy and
+                  Cookies</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="bi bi-patch-check me-2"></i> Buy a Plan</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="bi bi-info-circle me-2"></i> Help</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="bi bi-gear me-2"></i> Settings</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item text-danger" href="#" id="danger"
+                  ><i class="bi bi-box-arrow-right me-2"></i> Logout</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="showAll">
+          <button id="toggle-sidebar" class="btn btn-outline-light m-2">
+            Show All
+          </button>
+        </div>
+        <nav class="col-md-3 col-lg-2 d-md-block sidebar">
+          <div class="position-relative">
+            <div id="employer-sidebar">
+              <h2 class="sidebar-header mt-2">My Profile</h2>
+              <button class="btn btn-outline-light w-100 mb-3" id="viewprofile">
+                View Profile
+              </button>
+              <ul class="nav flex-column">
+                <li class="nav-item">
+                  <a href="#" class="nav-link">User Dashboard</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">My Jobs</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Submit Job</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Applicants Jobs</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Shortlist Candidates</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Messages</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Meetings</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Change Password</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">Delete Profile</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="mt-4">
+            <button class="btn btn-outline-light" id="close-sidebar">
+              Close
+            </button>
+          </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="col-md-7 ms-sm-auto col-lg-10 px-md-2">
+          <div class="search-filter m-3">
+            <input
+              type="text"
+              class="form-control w-50 d-inline"
+              placeholder="Search..."
+            />
+            <select class="form-select w-25 d-inline ms-2">
+              <option>Filter by job</option>
+              <option>Finance Manager</option>
+              <option>Accountant</option>
+              <option>Store Keeper</option>
+            </select>
+          </div>
+          <!--Applicant 1-->
+          <div class="card mb-3">
+            <div class="card-body d-flex align-items-center">
+              <img
+                src="https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                class="profile"
+                alt="Candidate"
+              />
+              <div class="flex-grow-1">
+                <div class="m-4">
+                  <h5>Candidate</h5>
+                  <h6>Finance Manager & Health | New York | $10/hour</h6>
+                  <small> Applied date: July 20, 2021</small>
+                </div>
+              </div>
+              <div class="text-end">
+                <span class="badge bg-primary mb-2">Pending</span>
+                <br />
+                <br />
+                <button class="btn btn-success btn-sm me-1">✔</button>
+                <button class="btn btn-danger btn-sm me-1">✖</button>
+                <button class="btn btn-light btn-sm">
+                  <a href="#" class="text-decoration-none fs-2">⬇️</a>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!--Applicant 2-->
+
+          <div class="card mb-3">
+            <div class="card-body d-flex align-items-center">
+              <img
+                src="https://media.istockphoto.com/id/1407759041/photo/confident-happy-beautiful-hispanic-student-girl-indoor-head-shot-portrait.jpg?s=2048x2048&w=is&k=20&c=eskue6p9gwUVS2t0Kpuw6rd7Sgu5nKgxsMD6Aqaba8I="
+                class="profile"
+                alt="Candidate"
+              />
+              <div class="flex-grow-1">
+                <div class="m-4">
+                  <h5>Candidate</h5>
+                  <h6>Finance Manager & Health | New York | $10/hour</h6>
+                  <small> Applied date: July 20, 2021</small>
+                </div>
+              </div>
+              <div class="text-end">
+                <span class="badge bg-primary mb-2">Pending</span>
+                <br />
+                <br />
+                <button class="btn btn-success btn-sm me-1">✔</button>
+                <button class="btn btn-danger btn-sm me-1">✖</button>
+                <button class="btn btn-light btn-sm">
+                  <a href="#" class="text-decoration-none fs-2">⬇️</a>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!--Applicant 3-->
+
+          <div class="card mb-3">
+            <div class="card-body d-flex align-items-center">
+              <img
+                src="https://media.istockphoto.com/id/1309328823/photo/headshot-portrait-of-smiling-male-employee-in-office.jpg?s=2048x2048&w=is&k=20&c=DIrQNh74utZ0e_1sqZ-M47jIqXc34ThnswFTm1dNiUI="
+                class="profile"
+                alt="Candidate"
+              />
+              <div class="flex-grow-1">
+                <div class="m-4">
+                  <h5>Candidate</h5>
+                  <h6>Finance Manager & Health | New York | $10/hour</h6>
+                  <small> Applied date: July 20, 2021</small>
+                </div>
+              </div>
+              <div class="text-end">
+                <span class="badge bg-primary mb-2">Pending</span>
+                <br />
+                <br />
+                <button class="btn btn-success btn-sm me-1">✔</button>
+                <button class="btn btn-danger btn-sm me-1">✖</button>
+                <button class="btn btn-light btn-sm">
+                  <a href="#" class="text-decoration-none fs-2">⬇️</a>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!--Applicant 4-->
+
+          <div class="card mb-3">
+            <div class="card-body d-flex align-items-center">
+              <img
+                src="https://media.istockphoto.com/id/1338134319/photo/portrait-of-young-indian-businesswoman-or-school-teacher-pose-indoors.jpg?s=2048x2048&w=is&k=20&c=OmMa2GTDqnWuarL0YQu6opsw_TcWYKE-rJb3exUAAQA="
+                class="profile"
+                alt="Candidate"
+              />
+              <div class="flex-grow-1">
+                <div class="m-4">
+                  <h5>Candidate</h5>
+                  <h6>Finance Manager & Health | New York | $10/hour</h6>
+                  <small> Applied date: July 20, 2021</small>
+                </div>
+              </div>
+              <div class="text-end">
+                <span class="badge bg-primary mb-2">Pending</span>
+                <br />
+                <br />
+                <button class="btn btn-success btn-sm me-1">✔</button>
+                <button class="btn btn-danger btn-sm me-1">✖</button>
+                <button class="btn btn-light btn-sm">
+                  <a href="#" class="text-decoration-none fs-2">⬇️</a>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!--Applicant 5-->
+
+          <div class="card mb-3">
+            <div class="card-body d-flex align-items-center">
+              <img
+                src="https://media.istockphoto.com/id/1386479313/photo/happy-millennial-afro-american-business-woman-posing-isolated-on-white.jpg?s=2048x2048&w=is&k=20&c=JecbHiBxM7ZzAADbPkqJuvNoCs3uO2VrK2LmrSpm3Ek="
+                class="profile"
+                alt="Candidate"
+              />
+              <div class="flex-grow-1">
+                <div class="m-4">
+                  <h5>Candidate</h5>
+                  <h6>Finance Manager & Health | New York | $10/hour</h6>
+                  <small> Applied date: July 20, 2021</small>
+                </div>
+              </div>
+              <div class="text-end">
+                <span class="badge bg-primary mb-2">Pending</span>
+                <br />
+                <br />
+                <button class="btn btn-success btn-sm me-1">✔</button>
+                <button class="btn btn-danger btn-sm me-1">✖</button>
+                <button class="btn btn-light btn-sm">
+                  <a href="#" class="text-decoration-none fs-2">⬇️</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <script src="app.js"></script>
+  </body>
+</html>
