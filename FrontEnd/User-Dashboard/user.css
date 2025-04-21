@@ -1,0 +1,194 @@
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 0; padding: 0; 
+    display: flex; 
+    background: whitesmoke    
+    /* https://cdn.pixabay.com/photo/2021/06/19/20/39/laptop-6349424_1280.jpg 
+    https://cdn.pixabay.com/photo/2020/05/05/16/01/background-bokeh-5133694_1280.jpg*/
+    /* background-image: url( https://c4.wallpaperflare.com/wallpaper/634/510/417/light-smoke-veil-lilac-wallpaper-preview.jpg ); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.dashboard-container { 
+    display: flex; 
+    width: 100%; 
+}
+
+.sidebar { 
+    width: 250px; 
+    background: white; 
+    color: black; 
+    padding: 20px; 
+    height: 100vh;
+}
+
+.logo { 
+    font-size: 40px; 
+    font-weight: bold; 
+    margin-bottom: 20px;
+    background: rgb(43,18,76);
+    background: linear-gradient(
+        131deg, rgba(43,18,76,1)0%,
+        rgba(170,73,193,1)83%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.side{
+    font-size: 20px; 
+    font-weight: bold; 
+    margin-bottom: 20px;
+    background: rgb(43,18,76);
+    background: linear-gradient(
+        131deg, rgba(43,18,76,1)0%,
+        rgba(170,73,193,1)83%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+.side:hover{
+    color: rgb(168, 24, 168);
+}
+
+.sidebar ul { 
+    list-style: none; 
+    padding: 0; 
+}
+
+.sidebar ul li { 
+    margin: 15px 0; 
+}
+
+.sidebar ul li a {
+    color: whitesmoke; 
+    text-decoration:none; 
+}
+
+.main-content { 
+    flex-grow: 1; 
+    padding: 20px; 
+}
+
+.profile-header { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background: #ffffff;
+    padding: 15px; 
+    border-radius: 8px; 
+    margin-bottom: 20px; 
+    box-shadow: purple;
+}
+
+.profile-info { 
+    display: flex; 
+    align-items: center; 
+}
+
+.profile-pic { 
+    width: 120px; 
+    height: 100px; 
+    border-radius: 50%; 
+    margin-right: 10px; 
+}
+
+.edit-btn {
+    background: rgb(43,18,76);
+    background: linear-gradient(
+        131deg, rgba(43,18,76,1)0%,
+        rgba(170,73,193,1)83%);
+    color: #ffffff; 
+     border: none; 
+     padding: 8px 15px; 
+     border-radius: 5px; 
+     cursor: pointer; 
+     width: 150px;
+     height: 50px;
+}
+
+.edit-btn:hover{
+    background: rgb(168, 24, 168);
+}
+
+.about-section{
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+    background: white;
+    padding: 15px; 
+    border-radius: 8px; 
+    box-shadow: 0 0 5px purple; 
+    margin-bottom: 20px;
+} 
+
+.hidden {
+    display: none;
+}
+
+#about-editor {
+    margin-top: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.details-section { 
+    justify-content: left;
+    text-align: left;
+    align-items: left;
+    background: white;
+    padding: 15px; 
+    border-radius: 8px; 
+    box-shadow: 0 0 5px purple; 
+    margin-bottom: 20px; 
+}
+
+form label { 
+    background: rgb(43,18,76);
+    background: linear-gradient(
+        131deg, rgba(43,18,76,1)0%,
+        rgba(170,73,193,1)83%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block; 
+    font-weight: bold; 
+    font-size: 17px;
+    margin-top: 10px; 
+}
+
+form input { 
+    width: 75%;
+    height: 150px;
+    padding: 8px; 
+    margin-top: 5px; 
+    border: 1px solid rgb(121, 48, 216); 
+    border-radius: 10px; 
+    height: fit-content;
+}
+
+.save-btn, .next-btn { 
+    background: rgb(43,18,76);
+    background: linear-gradient(
+        131deg, rgba(43,18,76,1)0%,
+        rgba(170,73,193,1)83%);
+    color: #ffffff; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin-top: 30px; 
+}
+
+.save-btn:hover, .next-btn:hover{
+    background: rgb(168, 24, 168);
+}
+

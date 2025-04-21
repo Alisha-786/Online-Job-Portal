@@ -1,0 +1,157 @@
+body {
+    background-color: #f3f6fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #f9f9ff;
+    border-right: 1px solid #dee2e6;
+    min-height: 100vh;
+  }
+  
+.logo {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: left;
+    background: rgb(43,18,76);
+    background: linear-gradient(
+        131deg, rgba(43,18,76,1)0%,
+        rgba(170,73,193,1)83%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .sidebar .nav-link {
+    background: rgb(43,18,76);
+    background: linear-gradient(
+        131deg, rgba(43,18,76,1)0%,
+        rgba(170,73,193,1)83%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 10px 15px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgb(151, 118, 255, 0.2);;
+  }
+  
+  .sidebar .nav-link:hover,
+  .sidebar .nav-link.active {
+    
+    border-radius: 8px;
+    font-weight: 500;
+  }
+
+  .profile-pic { 
+    width: 130px; 
+    height: 100px; 
+    border-radius: 50%; 
+}
+  
+.profile-btn{
+    background: rgb(43,18,76);
+    background: linear-gradient(
+        131deg, rgba(43,18,76,1)0%,
+        rgba(170,73,193,1)83%);
+    color: #ffffff; 
+    padding: 10px 10px; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin-top: 10px;
+}
+
+.profile-btn:hover{
+    background: rgb(168, 24, 168);
+}
+
+  .main-content {
+    background-color: #ffffff;
+  }
+  
+.title {
+    font-weight: bold;
+    text-align: left;
+    background: rgb(43,18,76);
+    background: linear-gradient(
+        131deg, rgba(43,18,76,1)0%,
+        rgba(170,73,193,1)83%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* .custom-select {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 8px 12px;
+    background-color: #fff;
+    color: #333;
+    box-shadow: none;
+    transition: all 0.3s ease;
+    outline: none;
+} */
+
+.form-select:focus {
+    border-color: #a18cd1 !important;
+    box-shadow: 0 0 8px rgba(161, 140, 209, 0.6) !important;
+    outline: none !important;
+    background-color: #f6f0fc !important;
+}
+
+.form-select:focus-visible{
+    border-color: #a18cd1 !important;
+    box-shadow: 0 0 8px rgba(161, 140, 209, 0.7) !important;
+    outline: none !important;
+}
+
+.form-select:hover{
+    border-color: #a18cd1 !important;
+    box-shadow: 0 0 8px rgba(161, 140, 209, 0.7) !important;
+    background-color: #f6f0fc !important;
+}
+
+
+
+  .card {
+    border-radius: 12px;
+    box-shadow: 0 4px 8px purple;
+  }
+  
+  .table th {
+    background: rgb(43,18,76);
+    background: linear-gradient(
+        131deg, rgba(43,18,76,1)0%,
+        rgba(170,73,193,1)83%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .table td {
+    vertical-align: middle;
+  }
+
+.edit-btn{
+    background: rgb(43,18,76);
+    background: linear-gradient(
+        131deg, rgba(43,18,76,1)0%,
+        rgba(170,73,193,1)83%);
+    padding: 0px 16px;
+    color: #ffffff; 
+    border: black; 
+    border-radius: 0px; 
+    cursor: pointer;  
+}
+.edit-btn:hover{
+    background: rgb(168, 24, 168);
+}
+
+.delete-btn{
+    background: linear-gradient(135deg, #ff0000, #b30000);
+    padding: 0px 7px;
+    color: #ffffff; 
+    border: black; 
+    border-radius: 0px; 
+    cursor: pointer;
+}
+
+.delete-btn:hover{
+    background: #e44343;
+}
