@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Job Blog Articles</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+    }
+    header {
+      background-color: #ffffff;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #511f52;
+    }
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .btn {
+      background-color: #f3f4f6;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    .btn-primary {
+      background-color: #fceabb;
+      color: #000;
+    }
+    .search-bar input {
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      overflow: hidden;
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 1rem;
+    }
+    .card-content h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+      color: #693b69;
+    }
+    .card-content p {
+      color: #777;
+      font-size: 0.9rem;
+    }
+    .tag {
+      display: inline-block;
+      background: #e0f0ff;
+      color: #a987ab;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <div class="logo">Next Hire</div>
+      <div class="search-bar">
+        <i class="as fa-search"></i>
+        <button class="btn">🔍</button>
+        <input type="text" placeholder="Search Articles..." />
+      </div>
+    </div>
+    <div class="header-right">
+      <button class="btn">🔔</button>
+      <button class="btn">👤</button>
+      <button class="btn">+ Host</button>
+      <button class="btn btn-primary">For Business</button>
+    </div>
+  </header>
+
+  <main class="articles-grid">
+    <div class="card">
+      <img src="images/tips.jpg" alt="Thank You Message" />
+      <div class="card-content">
+        <h3>Tips for Writing a Thank You Message for Your Boss</h3>
+        <p>Writing A Thanks Message To Boss: 30+ Samples With Smart Tips</p>
+        <div class="tag">#Resource Centre</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/appraisa+tips.jpeg" alt="Appraisal Tips" />
+      <div class="card-content">
+        <h3>Top 15 Performance Appraisal Tips (With Examples)</h3>
+        <p>Boost your career with these appraisal tips and examples.</p>
+        <div class="tag">#Resource Centre</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/python.jpeg" alt="Python Keywords" />
+      <div class="card-content">
+        <h3>Python Keywords | All 39 Reserved & Soft Explained + Code Examples</h3>
+        <p>Understand Python reserved keywords with examples.</p>
+        <div class="tag">#Resource Centre</div>
+      </div>
+      </div>
+
+      <div class="card">
+        <img src="images/s&p.jpeg" alt="S&P Global" />
+        <div class="card-content">
+          <h3>S&P Global strengthens its India Operations: Opens state-of-the-art office in Bengaluru</h3>
+          <p>S&P Global India has leased 33,000 square feet office space in Bengaluru to expand its operation.</p>
+          <div class="tag">#Resource Centre</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/self.png" alt="Self-Appraisal Comments" />
+        <div class="card-content">
+          <h3>80+ Self-Appraisal Comments For Your Performance Review</h3>
+          <p>Every good professional undertakes a self-appraisal by standing back and honestly evaluating their efforts. A self-appraisal is like planting a seed for future success. It is based on experience and self-awareness.</p>
+          <div class="tag">#Resource Centre</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="images/NPCIL-Assistant-Grade-1-Recruitment-2024.webp" alt="NPCIL recruitment" />
+        <div class="card-content">
+          <h3>NPCIL Assistant Grade 1 Recruitment 2024 Notification, Check Eligibility and Apply Now</h3>
+          <p>he Nuclear Power Corporation of India Limited (NPCIL) is recruiting for 58 Assistant Grade-1 positions in HR, Finance & Accounts (F&A), and Contracts & Materials Management (C&MM). The vacancies include 29 in HR, 17 in F&A, and 12 in C&MM, with reservations for various categories including PwBD. Applicants must meet the minimum qualification requirements and should ideally be proficient with computers.</p>
+          <div class="tag">#Resource Centre</div>
+        </div>
+      </div>
+
+  </main>
+</body>
+</html>
