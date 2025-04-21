@@ -1,0 +1,156 @@
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    background-color: #f8f9fa; 
+    background-image: url( https://c4.wallpaperflare.com/wallpaper/634/510/417/light-smoke-veil-lilac-wallpaper-preview.jpg );
+}
+
+.navbar { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 15px 20px; 
+    background-color: white;
+    background-image: url( https://c4.wallpaperflare.com/wallpaper/634/510/417/light-smoke-veil-lilac-wallpaper-preview.jpg );
+}
+
+.logo{
+    background: rgb(43,18,76);
+    background: linear-gradient(
+        131deg, rgba(43,18,76,1)0%,
+        rgba(170,73,193,1)83%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 50px;
+    font-weight: bolds;
+}
+
+.text{
+    background: rgb(43,18,76);
+    background: linear-gradient(
+        131deg, rgba(43,18,76,1)0%,
+        rgba(170,73,193,1)83%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.com-logo{
+    width: 80px; 
+    height: 80px; 
+    border-radius: 50%; 
+    margin-right: 10px;
+}
+
+.navbar .logo span { 
+    font-weight: bold; 
+}
+
+.navbar ul { 
+    list-style: none; 
+    display: flex; 
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 30px; 
+}
+
+.navbar ul li a { 
+    text-decoration: none; 
+    color: white; 
+}
+
+.auth-buttons a { 
+    text-decoration: none; 
+    color: white; 
+    margin-left: 10px; 
+    padding: 8px 12px; 
+    font-size: 14px;
+    background: rgb(43,18,76);
+    background: linear-gradient(
+        131deg, rgba(43,18,76,1)0%,
+        rgba(170,73,193,1)83%); 
+    border-radius: 5px; 
+}
+
+.auth-buttons{
+    margin-left: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.auth-buttons :hover{
+    background: rgb(168, 24, 168);
+}
+
+.job-container { 
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: flex-start;
+    gap: 20px;
+    padding: 40px;
+    min-height: 100vh;
+    box-sizing: border-box;
+
+}
+
+.job-details { 
+    width: 70%; 
+    min-width: 500px;
+    background: white; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0px 4px 6px  rgb(168, 24, 168); 
+    box-sizing: border-box;
+}
+
+.details{
+    background: rgb(43,18,76);
+    background: linear-gradient(
+        131deg, rgba(43,18,76,1)0%,
+        rgba(170,73,193,1)83%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.job-sidebar { 
+    width: 28%;
+    min-width: 250px;
+    max-width: 350px; 
+    background: white; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0px 4px 6px rgb(168, 24, 168);
+    box-sizing: border-box;
+}
+
+.save-apply { 
+    display: block; 
+    width: 100%; 
+    padding: 10px; 
+    margin-top: 10px; 
+    border: none; 
+    cursor: pointer; 
+    border-radius: 5px;
+}
+
+.save-apply{
+    cursor: pointer;
+    background: rgb(43,18,76);
+    background: linear-gradient(
+        131deg, rgba(43,18,76,1)0%,
+        rgba(170,73,193,1)83%);
+    color: #ffffff; 
+     border: none; 
+     padding: 15px 15px; 
+     border-radius: 5px; 
+     cursor: pointer; 
+}
+.save-apply:hover{
+    background: rgb(168, 24, 168);
+}
