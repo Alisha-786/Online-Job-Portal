@@ -1,0 +1,62 @@
+
+  body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  h2, h4 {
+    color: #343a40;
+  }
+
+  form {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .form-label {
+    font-weight: 500;
+    color: #212529;
+  }
+
+  .form-control,
+  .form-select {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+
+  .form-control:focus,
+  .form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.15rem rgba(13, 110, 253, 0.25);
+  }
+
+  .btn-primary {
+    background-color: #0d6efd;
+    border-radius: 8px;
+    padding: 10px 20px;
+  }
+
+  .btn-secondary {
+    border-radius: 8px;
+    padding: 10px 20px;
+  }
+
+  #previewSection {
+    border-left: 5px solid #0d6efd;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  #previewContent p {
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+
+  #previewContent h5 {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
