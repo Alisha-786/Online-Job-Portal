@@ -1,0 +1,19 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Resume</title>
+    <link rel="stylesheet" href="/upload.css">
+</head>
+<body>
+    <div class="upload-container">
+        <h2>Upload Your Resume</h2>
+        <form action="upload.php" method="post" enctype="multipart/form-data">
+            <label for="resume">Select Resume/CV (PDF/DOCX):</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+            <button type="submit" class="upload-btn">Upload</button>
+        </form>
+        <a href="/user.html" class="back-link">Back to User Dashboard</a>
+    </div>
+</body>
+</html>
