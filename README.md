@@ -1,6 +1,8 @@
 # Online-Job-Portal
 Project Description
 An Online Job Portal is a web-based platform where job seekers can search and apply for jobs, while employers can post job vacancies and manage applications. The system streamlines the hiring process by providing an efficient interface for both recruiters and candidates.
+![image](https://github.com/user-attachments/assets/6017e777-6105-4e9b-98e9-e096df437ebb)
+
 # Key Features & Functionalities
 1. User Management
 Job Seeker Registration & Login (Username, Email, Password, Resume Upload)
