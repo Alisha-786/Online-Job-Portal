@@ -1,0 +1,36 @@
+How to Deploy WAR File on Tomcat
+
+ 1. Install Tomcat:
+    - Download from https://tomcat.apache.org
+    - Extract and set CATALINA_HOME in environment variables
+
+ 2. Deploy WAR File:
+    - Navigate to: TOMCAT_HOME/webapps/
+    - Copy OnlineJobPortal.war to this directory
+
+ 3. Start Tomcat Server:
+    - Run startup.bat (Windows) or startup.sh (Linux/Mac)
+    - Access via: http://localhost:8080/OnlineJobPortal/
+
+ 4. Check Logs (Optional):
+    - Logs located at: TOMCAT_HOME/logs/catalina.out
+
+
+
+Database Connection Configuration
+
+ 1. Create Database:
+    CREATE DATABASE job_portal;
+    USE job_portal;
+
+ 2. Edit Database Config File:
+    Location: OnlineJobPortal/WEB-INF/classes/dbconfig.properties
+    db.driver=com.mysql.cj.jdbc.Driver
+    db.url=jdbc:mysql://localhost:3306/job_portal
+    db.username=root
+    db.password=yourpassword
+
+ 3. Add JDBC Connector:
+    - Place mysql-connector-java-X.X.X.jar in TOMCAT_HOME/lib/
+
+ 4. Restart Tomcat Server
